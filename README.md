@@ -58,13 +58,8 @@ Inventory_Management/
 ### Business Dashboard  
 ![Business Dashboard](Frontend_Inventory_Managment/public/admin.png)
 
-### Orders Listing  
-![Orders Listing](Frontend_Inventory_Managment/public/allorders-admin.png)
-
 ### Products Listing  
 ![Orders Listing](Frontend_Inventory_Managment/public/productlist-admin.png)
-
-
 
 
 # 📦 USER DASHBOARD  
