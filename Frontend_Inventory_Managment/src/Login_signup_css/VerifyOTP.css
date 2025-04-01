@@ -1,0 +1,101 @@
+/* Container styling */
+
+.new-verify-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f1f5f9, #d9e1ec);
+}
+
+.verify-otp-container {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.verify-otp-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.verify-otp-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Input group styling */
+.verify-otp-input-group {
+  margin-bottom: 20px;
+}
+
+.verify-otp-input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.verify-otp-input:focus {
+  border-color: #4e54c8;
+  outline: none;
+}
+
+/* Button styling */
+.verify-otp-submit-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4e54c8;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.verify-otp-submit-button:hover {
+  background-color: #3e44a7;
+}
+
+/* Error and success message styling */
+.verify-otp-error-message,
+.verify-otp-success-message {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.verify-otp-error-message {
+  color: #f44336;
+  background-color: #ffe5e5;
+}
+
+.verify-otp-success-message {
+  color: #4CAF50;
+  background-color: #e5ffe5;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .verify-otp-container {
+    width: 90%;
+    padding: 30px;
+  }
+}

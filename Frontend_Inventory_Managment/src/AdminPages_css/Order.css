@@ -1,0 +1,131 @@
+/* CSS for the Status Column */
+.order-table td:nth-child(7), 
+.order-table th:nth-child(7) {
+    text-align: center;
+    width: 150px;
+}
+
+/* Status Styles */
+.order-table td .status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 0.9rem;
+    white-space: nowrap; /* Prevent status text from wrapping */
+}
+
+/* Specific Status Styles */
+.order-table td .status.canceled {
+    color: white;
+    background-color: red;
+}
+
+.order-table td .status.cancellation-requested {
+    color: black;
+    background-color: orange;
+}
+
+.order-table td .status.dispatched {
+    color: white;
+    background-color: blue;
+}
+
+.order-table td .status.out-for-delivery {
+    color: white;
+    background-color: purple;
+}
+
+.order-table td .status.delivered {
+    color: white;
+    background-color: green;
+}
+
+.order-table td select {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    background-color: #f9f9f9;
+    max-width: 100%; /* Ensure dropdown fits within small screens */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .order-table td .status {
+        font-size: 0.85rem;
+        padding: 4px 8px;
+    }
+
+    .order-table td select {
+        font-size: 0.85rem;
+        padding: 4px;
+    }
+
+    .order-table td:nth-child(7), 
+    .order-table th:nth-child(7) {
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .order-table td .status {
+        font-size: 0.8rem;
+        padding: 3px 6px;
+    }
+
+    .order-table td select {
+        font-size: 0.8rem;
+        padding: 3px;
+    }
+
+    .order-table td:nth-child(7), 
+    .order-table th:nth-child(7) {
+        width: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Stack columns for small devices */
+    .order-table tr th{
+        display: none;
+    }
+    .order-table td, 
+    .order-table th {
+        display: block;
+        text-align: right;
+        width: 100%; /* Full width for stacking */
+    }
+
+    .order-table td:before {
+        content: attr(data-label); /* Use data-label for accessibility */
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #34495e;
+        margin-right: 5px;
+    }
+
+    .order-table td .status {
+        font-size: 0.75rem;
+        padding: 2px 5px;
+    }
+
+    .order-table td select {
+        font-size: 0.75rem;
+        padding: 2px;
+        width: 100%; /* Full width for dropdowns */
+    }
+}
+
+@media (max-width: 360px) {
+    .order-table td .status {
+        font-size: 0.7rem;
+        padding: 1px 3px;
+    }
+
+    .order-table td select {
+        font-size: 0.7rem;
+        padding: 1px;
+    }
+}

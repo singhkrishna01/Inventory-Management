@@ -1,0 +1,85 @@
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  
+    .image-grid {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Flexible layout for images */
+      gap: 0.5rem;
+      justify-items: center; /* Center images horizontally */
+  
+      figure {
+        margin: 0;
+  
+        .box-image-style {
+          width: 100%;
+          max-width: 100px; /* Set max width for images */
+          border-radius: 0.5rem;
+          transition: transform 0.3s ease;
+  
+          &:hover {
+            filter: opacity(0.7);
+            transform: scale(1.05); /* Add a hover zoom effect */
+          }
+        }
+      }
+    }
+  
+    .main-screen {
+      display: flex;
+      justify-content: center; /* Center the main image */
+      align-items: center;
+  
+      img {
+        width: 100%;
+        max-width: 20rem; /* Limit the size of the main image */
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-grid {
+      grid-template-columns: 1fr; /* Stack the columns */
+    }
+  
+    .image-grid {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Smaller images for medium screens */
+    }
+  
+    .main-screen img {
+      max-width: 18rem; /* Slightly reduce the main image size */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .main-grid {
+      padding: 0.5rem;
+  
+      .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* Smaller image grid */
+        gap: 0.25rem;
+      }
+  
+      .main-screen img {
+        max-width: 90%; /* Full width for smaller screens */
+      }
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .main-grid {
+      .image-grid {
+        grid-template-columns: repeat(3, 1fr); /* Smaller images in a tighter grid */
+      }
+  
+      .main-screen img {
+        max-width: 80%; /* Further reduce the main image size */
+      }
+    }
+  }
+  

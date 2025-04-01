@@ -1,0 +1,246 @@
+/* Signup.css */
+.signup-main-container{
+    width: 100vw;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+  .signup-container {
+    display: flex;
+    width: 80%;
+    margin-top: .7rem;
+    max-width: 1000px;
+    min-height: 600px;
+    background: #fff;
+    border-radius: 15px;
+    /* box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .signup-left-container,
+  .signup-right-container {
+    width: 50%;
+    padding: 40px;
+  }
+  
+  .signup-left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f5f7fa;
+  }
+  
+  .signup-form-container {
+    width: 100%;
+  }
+  
+  .signup-title {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .signup-input {
+    width: 100%;
+    padding: 14px 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+  }
+  .input-group select{
+        width: 100%;
+        padding: 14px 20px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        color: #333;
+        background-color: #f9f9f9;
+        transition: border-color 0.3s;
+
+  }
+  
+  .signup-input:focus {
+    border-color: #4e54c8;
+    outline: none;
+  }
+  
+  .show-password-checkbox {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+  }
+  
+  .show-password-label {
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .password-criteria {
+    margin: 15px 0;
+  }
+  
+  .password-criteria h4 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .criteria-list {
+    list-style: none;
+  }
+  
+  .criteria-list li {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .criteria-met {
+    color: #4CAF50;
+  }
+  
+  .criteria-unmet {
+    color: #f44336;
+  }
+  
+  .signup-submit-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4e54c8;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .signup-submit-button:hover {
+    background-color: #3e44a7;
+  }
+  
+  .signup-footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .signup-footer p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .login-link {
+    color: #4e54c8;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  
+  .signup-right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: #fff;
+  }
+  
+  .signup-right-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .signup-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .signup-image {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 8px;
+  }
+  
+  .signup-error-message,
+  .signup-success-message {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f44336;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #ffe5e5;
+  }
+  
+  .signup-success-message {
+    color: #4CAF50;
+    background-color: #e5ffe5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width:1024px) {
+    .signup-container{
+
+    }
+    
+  }
+
+  @media (max-width: 768px) {
+    .signup-container {
+      flex-direction: column-reverse;
+      width: 90%;
+    }
+  
+    .signup-left-container,
+    .signup-right-container {
+      width: 100%;
+    }
+  }
+  
+
+  /* Criteria met styling */
+.criteria-met {
+    color: #4CAF50; /* Green for met criteria */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.criteria-met::before {
+    content: "✔️";
+    margin-right: 8px;
+}
+
+/* Criteria unmet styling */
+.criteria-unmet {
+    color: #f44336; /* Red for unmet criteria */
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.criteria-unmet::before {
+    content: "❌";
+    margin-right: 8px;
+}

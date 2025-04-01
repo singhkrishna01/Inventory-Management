@@ -1,0 +1,149 @@
+/* Filter Section Container */
+.filter-section {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping */
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    border-radius: 5px;
+    padding: 1rem;
+    gap: 1rem; /* Add spacing between elements */
+    width: 100%; /* Ensure full-width layout */
+}
+
+/* Inputs inside Filter Section */
+.filter-section-depth input {
+    /* Adjust margin for smaller spacing */
+    flex: 1; /* Allow inputs to adjust size dynamically */
+    min-width: 150px; /* Set a minimum width for inputs */
+    max-width: 100%; /* Avoid overflowing */
+}
+
+/* Filter Dropdown */
+.filter-select {
+    border: none;
+    box-shadow: 2px 1px 13px gray;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    margin: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem; /* Adjust font size */
+    flex: 1; /* Allow the dropdown to grow dynamically */
+    min-width: 120px; /* Set a minimum width */
+    max-width: 100%; /* Prevent overflow */
+}
+
+/* Product Count Section */
+.product-count {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    color: gray; /* Add a color for better visibility */
+}
+
+/* Search Input */
+.search-input {
+    border: none;
+    box-shadow: 2px 1px 13px gray;
+    border-radius: 1rem;
+    height: 2.5rem; /* Adjust height for better fit */
+    padding: 0.8rem;
+    font-size: medium; /* Use a consistent font size */
+    font-weight: 400;
+    letter-spacing: 1px;
+    outline: none;
+    flex: 2; /* Larger input area for search fields */
+    min-width: 150px;
+    max-width: 100%;
+}
+
+/* Reset Button */
+.reset-button {
+    height: 2.5rem;
+    width: 8rem;
+    border: none;
+    border-radius: 30px;
+    background-color: rgb(39, 208, 59);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0.5rem 0;
+}
+
+.reset-button:hover {
+    background-color: #34a853;
+}
+
+/* Filter Button Hover */
+.filter-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+
+/* For Medium Screens (Tablets and Smaller Laptops) */
+@media (max-width: 768px) {
+    .filter-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to fit the container */
+    }
+
+    .filter-select,
+    .search-input {
+        width: 100%; /* Full-width for dropdown and input */
+        margin: 0.5rem 0;
+    }
+
+    .reset-button {
+        width: 100%; /* Full-width button for smaller screens */
+        height: 2.7rem; /* Adjust button height */
+    }
+}
+
+/* For Small Phones (<=576px) */
+@media (max-width: 576px) {
+    .filter-section {
+        padding: 0.5rem; /* Reduce padding */
+    }
+
+    .filter-select,
+    .search-input {
+        font-size: 0.8rem; /* Smaller font size */
+        padding: 0.6rem; /* Adjust padding */
+    }
+
+    .reset-button {
+        font-size: 0.9rem; /* Smaller font size */
+        height: 2.3rem;
+    }
+
+    .product-count {
+        font-size: 0.9rem; /* Adjust text size */
+    }
+}
+
+/* For Very Small Phones (<=375px) */
+@media (max-width: 375px) {
+    .filter-section {
+        padding: 0.5rem; /* Tighten padding */
+        gap: 0.5rem; /* Reduce gaps */
+    }
+
+    .filter-select,
+    .search-input {
+        min-width: unset; /* Allow elements to shrink further */
+        padding: 0.5rem; /* Compact padding */
+        font-size: 0.7rem; /* Smaller font size */
+    }
+
+    .reset-button {
+        font-size: 0.8rem;
+        height: 2rem; /* Compact height */
+    }
+
+    .product-count {
+        font-size: 0.8rem;
+    }
+}

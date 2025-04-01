@@ -1,0 +1,266 @@
+
+.main-login-new {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.login-page {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    min-height: 600px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    flex-direction: row;
+}
+
+.login-page .left-side,
+.login-page .right-side {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.left-side {
+    background: linear-gradient(135deg, #4f57b9, #6d83f2);
+    color: #fff;
+    text-align: center;
+}
+
+.left-side h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.inventory-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.right-side {
+    background-color: #f9f9f9;
+    padding: 50px 30px;
+}
+.right-side form{
+    width: 90%;
+}
+.right-side h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.email-input,
+.password-input {
+    font-size: 1rem;
+    padding: 15px;
+    margin: 0.2rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.password-input-group {
+    position: relative;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+
+.password-toggle-icon:hover {
+    color: #4f57b9;
+}
+
+/* Input Focus Styles */
+.email-input:focus,
+.password-input:focus {
+    border-color: #6d83f2;
+    box-shadow: 0 4px 12px rgba(109, 131, 242, 0.2);
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.forgot-password-link {
+    color: #6d83f2;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.forgot-password-link:hover {
+    color: #4f57b9;
+}
+
+/* Submit Button */
+.login-button {
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(135deg, #6d83f2, #4f57b9);
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 8px 12px rgba(109, 131, 242, 0.2);
+    width: 100%;
+    margin-top: 20px;
+}
+
+.login-button:hover {
+    background: linear-gradient(135deg, #5c70d1, #3c47a7);
+    transform: scale(1.03);
+}
+
+.login-button:active {
+    transform: scale(0.97);
+}
+
+/* Error Message */
+.error-message {
+    font-size: 0.9rem;
+    color: #e63946;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+.footer a {
+    color: #6d83f2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #4f57b9;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .login-page {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .left-side h1 {
+        font-size: 2.2rem;
+    }
+
+    .right-side h2 {
+        font-size: 1.8rem;
+    }
+
+    .inventory-image {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-page {
+        min-height: auto;
+        box-shadow: none;
+    }
+
+    .login-page .left-side,
+    .login-page .right-side {
+        padding: 20px;
+    }
+
+    .left-side h1 {
+        font-size: 1.8rem;
+    }
+
+    .right-side h2 {
+        font-size: 1.6rem;
+    }
+
+    .email-input,
+    .password-input {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-page {
+        border-radius: 8px;
+    }
+
+    .left-side h1,
+    .right-side h2 {
+        font-size: 1.4rem;
+    }
+
+    .email-input,
+    .password-input {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .forgot-password-link {
+        font-size: 0.8rem;
+    }
+
+    .login-button {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .left-side h1,
+    .right-side h2 {
+        font-size: 1.2rem;
+    }
+
+    .email-input,
+    .password-input {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+
+    .login-button {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+
+    .footer {
+        font-size: 0.75rem;
+    }
+}

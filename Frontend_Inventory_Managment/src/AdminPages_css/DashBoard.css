@@ -1,0 +1,174 @@
+/* Dashboard Main Container */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f6f9;
+}
+
+/* Header */
+.dashboard-header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Welcome Section */
+.dashboard-welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.welcome-text h1 {
+    font-size: 1.8rem;
+    color: #444;
+}
+
+.welcome-text span {
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+.welcome-image img {
+    max-width: 100%;
+    width: 10rem;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard Cards Section */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual Card */
+.dashboard-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Icon */
+.card-icon {
+    font-size: 2.5rem;
+    color: #6366f1;
+    margin-bottom: 10px;
+}
+
+/* Card Title */
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Card Number */
+.card-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3b82f6;
+}
+
+/* Card Description */
+.card-description {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Responsive Styles for Tablets and Smaller Desktops */
+@media (max-width: 1024px) {
+    .dashboard-welcome {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dashboard-header {
+        font-size: 1.8rem;
+    }
+    
+    .welcome-image img {
+        max-width: 70%;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+}
+
+/* Responsive Styles for Large Phones and Smaller Tablets */
+@media (max-width: 768px) {
+    .dashboard-title {
+        font-size: 1.5rem;
+    }
+
+    .welcome-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .card-title, .card-number, .card-description {
+        font-size: 0.95rem;
+    }
+}
+
+/* Responsive Styles for Small Phones */
+@media (max-width: 576px) {
+    .dashboard-title {
+        font-size: 1.3rem;
+    }
+
+    .welcome-text h1 {
+        font-size: 1.4rem;
+    }
+
+    .card-title, .card-number, .card-description {
+        font-size: 0.85rem;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .card-icon {
+        font-size: 2rem;
+    }
+
+    .card-number {
+        font-size: 1.4rem;
+    }
+
+    .welcome-image img {
+        max-width: 90%;
+    }
+}

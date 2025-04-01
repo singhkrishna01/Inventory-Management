@@ -1,0 +1,130 @@
+.form-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* General Styling */
+.update-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background-color: #fdfdfd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update-title {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.update-form__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.update-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.update-label {
+    font-size: 16px;
+    color: #495057;
+    font-weight: 500;
+}
+
+.update-input, .update-textarea, .update-file {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.update-input:focus, .update-textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.update-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.update-button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0.8rem;
+    width: 100%;
+}
+
+.update-button:hover {
+    background-color: #0056b3;
+}
+
+.current-image {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.image-preview-update {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-preview-update img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 2px solid transparent; /* Default border */
+}
+
+.image-preview-update:hover {
+    transform: scale(1.05);
+}
+
+.selected-image img {
+    border-color: #007bff; /* Highlight border color */
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5); /* Subtle shadow */
+}
+
+.selected-image::after {
+    content: "Selected";
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.image-preview-update.selected {
+    border: 2px solid black;
+     border-radius: 4px;
+    box-shadow: 0 0 5px rgba(4, 43, 239, 0.3);
+}

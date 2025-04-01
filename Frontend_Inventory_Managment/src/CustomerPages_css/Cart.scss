@@ -1,0 +1,107 @@
+.cart-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    // border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    // background: #fdfdfd;
+    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  .cart-header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    text-align: center;
+  }
+  
+  .cart-item-card {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease-in-out;
+    .combined-data{
+        img{
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+  }
+  
+  .cart-item-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-item-cell {
+    text-align: center;
+    padding: 5px;
+  }
+  
+  .remove-button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff4b5c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .remove-button:hover {
+    background-color: #e63946;
+  }
+  
+  .total-bill-section {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .back-to-product-button,
+  .back-button {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    width: 10rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .back-to-product-button:hover,
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .empty-cart-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .empty-cart-text {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .empty-cart-icon {
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  

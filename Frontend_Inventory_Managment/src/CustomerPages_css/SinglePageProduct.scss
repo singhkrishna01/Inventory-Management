@@ -1,0 +1,245 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Single Product Data Section */
+.single-product-data {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Grid Layout for Product */
+.single-product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.product-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Set a maximum width */
+    border-radius: 8px;
+    object-fit: contain; /* Maintain aspect ratio and avoid cropping */
+}
+
+.product-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.product-data h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Price Styling */
+.product-data-price {
+    font-size: 1.5rem;
+    color: #888;
+    font-weight: 500;
+}
+
+.product-data-real-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7a39fa;
+}
+
+.product-data-real-price span {
+    color: #ff6f61;
+    font-size: 1.8rem;
+}
+
+/* Description */
+.product-data p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+/* Warranty Section */
+.product-data-warranty {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    border-top: 2px solid #eee;
+    padding-top: 1.5rem;
+}
+
+.product-warranty-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.icon-container {
+    background-color: black;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.warranty-icon {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.product-warranty-data p {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Product Availability and ID Info */
+.product-data-info {
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+}
+
+.product-data-info span {
+    color: #ff6f61;
+    font-weight: 800;
+}
+
+/* Quantity Selector and Button */
+.single-product-data {
+    .quantity-selector {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+
+    .quantity-selector label {
+        font-weight: bold;
+        margin-right: 0.5rem;
+    }
+
+    .quantity-input {
+        width: 60px;
+        padding: 0.4rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        text-align: center;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    .quantity-input:focus {
+        border-color: #007BFF;
+    }
+
+    .navigate-cart-button {
+        margin-top: 1rem;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .navigate-cart-button:hover {
+        background-color: #218838;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .single-product-data {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .single-product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-warranty-data {
+        width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-data h2 {
+        font-size: 1.8rem;
+    }
+
+    .product-data-price,
+    .product-data-real-price {
+        font-size: 1.2rem;
+    }
+
+    .product-data p {
+        font-size: 0.9rem;
+    }
+
+    .product-data-info {
+        font-size: 0.9rem;
+    }
+
+    .product-warranty-data p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .product-data h2 {
+        font-size: 1.6rem;
+    }
+
+    .product-warranty-data p {
+        font-size: small;
+    }
+
+    .icon-container {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .warranty-icon {
+        font-size: 1.2rem;
+    }
+}
+
+.btn {
+    width: 10rem;
+}

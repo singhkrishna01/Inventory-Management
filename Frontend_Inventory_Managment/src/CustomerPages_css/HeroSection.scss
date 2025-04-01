@@ -1,0 +1,187 @@
+.container-home-new {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+
+    animation: fadeInUp 1s ease-out; /* Animation for the container */
+}
+
+/* Keyframes for animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Left Container */
+.left-container-new {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    align-items: flex-start;
+
+    animation: fadeInUp 1.5s ease-out;
+    animation-delay: 0.3s; /* Delayed start for staggered effect */
+    opacity: 0; /* Initial state for animation */
+    animation-fill-mode: forwards;
+
+    .intro-data-new {
+        font-size: 2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+    }
+
+    .heading-new {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        color: rgb(97, 97, 255);
+        font-weight: bold;
+        letter-spacing: 1.4px;
+    }
+
+    .main-content-new {
+        font-weight: 300;
+        font-size: large;
+        letter-spacing: 1.4px;
+        line-height: 2;
+        margin-bottom: 3rem;
+    }
+
+    div button {
+        width: 10rem;
+        height: 3rem;
+        background-color: rgb(7, 204, 7);
+        transition: 0.4s ease-out;
+
+        &:hover {
+            background-color: green;
+        }
+    }
+}
+
+/* Right Container */
+.right-container-new {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: fadeInUp 1.5s ease-out;
+    animation-delay: 0.6s; /* Longer delay for staggered effect */
+    opacity: 0; /* Initial state for animation */
+    animation-fill-mode: forwards;
+
+    img {
+        max-width: 100%; /* Ensures the image scales proportionally */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensures the full image is visible */
+        border-radius: 1rem; /* Optional: Adds rounded corners */
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+/* Responsive Styles */
+
+/* Medium Devices (Tablets) */
+@media (max-width: 768px) {
+    .container-home-new {
+        grid-template-columns: 1fr; /* Single-column layout */
+        grid-gap: 1.5rem;
+    }
+
+    .left-container-new {
+        margin-top: 3rem;
+        margin-left: 0;
+
+        .intro-data-new {
+            font-size: 1.8rem; /* Adjust font size */
+        }
+
+        .main-content-new {
+            font-size: medium; /* Reduce font size */
+        }
+
+        div button {
+            width: 100%; /* Full-width buttons */
+            height: 2.5rem;
+        }
+    }
+
+    .right-container-new img {
+        width: 80%; /* Reduce width to fit smaller screens */
+    }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 576px) {
+    .container-home-new {
+        grid-gap: 1rem;
+    }
+
+    .left-container-new {
+        .intro-data-new {
+            font-size: 1.5rem;
+        }
+
+        .heading-new {
+            font-size: 1.2rem;
+        }
+
+        .main-content-new {
+            font-size: small;
+            line-height: 1.8;
+        }
+
+        div button {
+            height: 2.2rem;
+            font-size: 0.9rem;
+        }
+    }
+
+    .right-container-new img {
+        max-width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Very Small Devices (<=375px) */
+@media (max-width: 375px) {
+    .left-container-new {
+        margin-top: 2rem;
+
+        .intro-data-new {
+            font-size: 1.2rem;
+        }
+
+        .heading-new {
+            font-size: 1rem;
+        }
+
+        .main-content-new {
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            line-height: 1.6;
+        }
+
+        div button {
+            height: 2rem;
+            font-size: 0.8rem;
+        }
+    }
+
+    .right-container-new img {
+        width: 90%;
+        height: auto; /* Maintain aspect ratio */
+    }
+}

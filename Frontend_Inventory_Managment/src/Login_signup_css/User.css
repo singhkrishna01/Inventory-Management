@@ -1,0 +1,239 @@
+/* Main Admin Portal Layout */
+.admin-portal {
+  display: flex;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+
+/* Sidebar Styles */
+.admin-sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transform: translateX(0); /* Sidebar visible by default */
+}
+
+.admin-sidebar.open {
+  transform: translateX(0); /* Sidebar visible when open */
+}
+
+.admin-sidebar-title {
+  font-size: 1.5rem;
+  color: #ecf0f1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.admin-menu-item {
+  margin: 15px 0;
+  width: 100%;
+}
+
+.admin-link,
+.admin-active-link {
+  color: #bdc3c7;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 10px 15px;
+  display: block;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.admin-link:hover,
+.admin-active-link {
+  color: #ecf0f1;
+  background-color: #34495e;
+}
+
+.admin-logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: auto;
+  width: 100%;
+}
+
+.admin-logout-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Navbar for Small Screens */
+.admin-navbar {
+  background-color: #2c3e50;
+  color: white;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.admin-navbar.open {
+  display: flex; /* Show navbar when the sidebar is open */
+}
+
+.navbar-toggle-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hamburger-icon {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* When Sidebar is Open - Hamburger Icon Transforms */
+.admin-navbar.open .hamburger-icon::before,
+.admin-navbar.open .hamburger-icon::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: transform 0.3s ease;
+}
+
+.admin-navbar.open .hamburger-icon::before {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.admin-navbar.open .hamburger-icon::after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 250px;
+    transform: translateX(-100%); /* Sidebar is hidden by default */
+  }
+
+  .admin-navbar {
+    display: flex; /* Show navbar on small screens */
+  }
+
+  .admin-navbar.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .admin-main-content {
+    margin-top: 60px; /* Offset for navbar */
+    flex-grow: 1;
+  }
+
+  .admin-sidebar.open {
+    transform: translateX(0); /* Sidebar becomes visible on toggle */
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-portal {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .admin-sidebar-title {
+    display: none;
+  }
+
+  .admin-menu-item {
+    margin: 0;
+    flex: 1;
+  }
+
+  .admin-link,
+  .admin-active-link {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .admin-main-content {
+    margin-bottom: 60px; /* Offset for fixed sidebar */
+  }
+
+  .admin-logout-btn {
+    display: none;
+  }
+}
+
+/* Main Content Area */
+.admin-main-content {
+  flex-grow: 1;
+  margin-left: 250px; /* Offset for the sidebar width */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .admin-main-content {
+    margin-left: 0; /* Remove offset for small screens */
+    margin-top: 60px; /* Account for navbar height */
+  }
+}
+
+/* For very small screens */
+@media (max-width: 576px) {
+  .admin-main-content {
+    margin-bottom: 60px; /* Offset for fixed bottom sidebar */
+  }
+}
+
+/* Blurred Effect */
+.content-blur {
+  filter: blur(5px);
+  pointer-events: none; /* Prevent interaction with blurred content */
+  transition: filter 0.3s ease;
+}

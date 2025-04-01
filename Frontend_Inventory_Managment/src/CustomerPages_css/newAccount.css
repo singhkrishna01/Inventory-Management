@@ -1,0 +1,280 @@
+/* Container for the entire account section */
+.account-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    width: 50rem;
+    animation: fadeIn 1.5s ease;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .account-container:hover {
+    transform: scale(1.02);
+    background: linear-gradient(135deg, #0056b3, #007BFF);
+  }
+  
+  /* Title for the profile section */
+  .account-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1s ease;
+  }
+  
+  /* Rotating quote styles */
+  .account-quote {
+    text-align: center;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #f1f1f1;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInQuote 4s ease infinite alternate, slideInQuote 2s ease-out;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .account-quote:hover {
+    background: rgba(0, 0, 0, 0.6);
+    transform: scale(1.05);
+  }
+
+  .motivational-quote p{
+    font-weight: bold;
+    font-size: large;
+    font-style: italic;
+  }
+  
+  /* Error message styling */
+  .account-error {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: shake 0.5s ease;
+  }
+  
+  /* Form section */
+  .account-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: fadeInUp 1s ease;
+  }
+  
+  /* Photo section */
+  .account-photo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .account-photo-label {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .account-photo-input {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  
+  .account-photo-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    animation: pulse 2s infinite;
+  }
+  
+  /* Input group */
+  .account-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  
+  .account-label {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .account-input {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .account-input:focus {
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: 0 0 10px #ffffff;
+  }
+  
+  /* Submit button */
+  .account-submit-btn {
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #28a745, #218838);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .account-submit-btn:hover {
+    background: linear-gradient(135deg, #218838, #28a745);
+    transform: scale(1.05);
+  }
+  
+  .account-submit-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Account info display */
+  .account-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .account-photo-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .account-no-photo {
+    font-size: 0.9rem;
+    color: #f1f1f1;
+  }
+  
+  .account-details {
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .account-detail {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+  }
+  
+  .account-edit-btn {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #FFC107, #FFA000);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .account-edit-btn:hover {
+    background: linear-gradient(135deg, #FFA000, #FFC107);
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInQuote {
+    0% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInQuote {
+    from {
+      transform: translateY(-20px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+  }
+  
